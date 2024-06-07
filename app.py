@@ -19,6 +19,7 @@ def my_index1_post():
     
     # Remove digits
     text_final = ''.join(c for c in text1 if not c.isdigit())
+    #hi
     
     # Remove punctuation (if needed)
     # text3 = ''.join(c for c in text2 if c not in punctuation)
