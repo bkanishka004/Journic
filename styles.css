@@ -1,0 +1,316 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+  color: #fff;
+}
+body {
+  height: 100%;
+
+  width: 100%;
+}
+*::selection {
+  background-color: #fff;
+  color: #95c11e;
+}
+
+body::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+  background: black;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+
+  border-radius: 30px;
+}
+body {
+  overflow-x: hidden;
+}
+#nav {
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+  gap: 50px;
+  position: fixed;
+  justify-content: flex-start;
+  z-index: 999;
+  margin-top: 0;
+}
+#nav h4 {
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 2.15vw;
+}
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  position: fixed;
+}
+
+#main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 5;
+}
+#page1 h1 {
+  font-size: 10.5vw;
+  font-weight: 900;
+  position: relative;
+  padding-top: 20px;
+}
+#page1 h1::before {
+  content: "JOURNIC";
+  position: absolute;
+  color: #000;
+  top: -5px;
+  left: -5px;
+  -webkit-text-stroke: 1.5px #95c11e;
+  z-index: -1;
+  padding-top: 20px;
+}
+#page1 h2 {
+  font-size: 35px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#page1 p {
+  font-size: 1.5vw;
+  font-weight: 500;
+  width: 40%;
+}
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+#scroller {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+#scroller::-webkit-scrollbar {
+  display: none;
+}
+#scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: scroll;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#scroller h4 {
+  display: inline-block;
+  font-size: 120px;
+  font-weight: 900;
+  font-family: gilroy;
+  margin-right: 20px;
+  transition: all linear 0.3s;
+  color: #000;
+  -webkit-text-stroke: 2px #ffffff;
+}
+#scroller h4:hover {
+  color: #95c11e;
+  -webkit-text-stroke: 2px #95c11e;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.button {
+  text-align: center;
+}
+
+.order-button {
+  background-color: #95c11e;
+  border: none;
+  color: white;
+  padding: 30px 55px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 8px 4px;
+  transition-duration: 0.6s;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.order-button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #95c11e;
+}
+
+#about-us {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  justify-content: center;
+}
+#about-us img {
+  height: 220px;
+  width: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+  justify-content: center;
+  padding: 20px;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+}
+#about-us-in {
+  width: 50%;
+  text-align: center;
+}
+#about-us-in h3 {
+  font-size: 54px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+#about-us-in p {
+  font-size: 20px;
+  line-height: 26px;
+}
+#cards-container {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+  z-index: 10;
+}
+.card {
+  height: 70%;
+  width: 24%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all ease 0.6s;
+}
+#card1 {
+  background-image: url(https://images.zoomin.com/webresources/pages/occasions/24/fathers-day-gifts/mini-fridge-photo-magnets.jpg);
+}
+#card2 {
+  background-image: url(https://images.zoomin.com/hardcover_5.5_book_20/4.0.0/product_images/web/5.5-personalized-hardcover-album-2.jpg);
+}
+#card3 {
+  background-image: url(https://images.zoomin.com/polaroid_prints/4.0.0/product_images/web/retro-prints-3.jpg);
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  padding: 30px;
+  padding-top: 160px;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+.overlay h4 {
+  color: #000;
+  font-size: 40px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  font-weight: 800;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+}
+.overlay p {
+  color: #000;
+  font-size: 28px;
+  white-space: normal;
+  margin: 0;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+
+#footer {
+  height: 20vh;
+  width: 100%;
+  background: black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6.5vw;
+  padding: 0 100px;
+}
+/* Responsivess*/
+@media screen and (max-width: 768px) {
+  #nav {
+    padding: 0 3%;
+  }
+
+  #nav h4 {
+    font-size: 2vh;
+    margin-right: 10px;
+  }
+
+  #page1 h1 {
+    font-size: 10vw;
+  }
+
+  #page1 h2 {
+    font-size: 2vh;
+  }
+
+  #page1 p {
+    font-size: 1.5vh;
+    width: 90%;
+  }
+
+  #about-us img {
+    height: 15vh;
+    width: 15vh;
+  }
+
+  #about-us-in h3 {
+    font-size: 3vh;
+  }
+
+  #about-us-in p {
+    font-size: 1.5vh;
+  }
+}
